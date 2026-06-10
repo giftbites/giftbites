@@ -1,0 +1,364 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&display=swap');
+
+/* CSS Variables */
+:root {
+    --primary-orange: #F97316;
+    --primary-dark: #1E293B;
+    --text-gray: #1F2937;
+    --light-gray: #F9FAFB;
+    --border-gray: #E5E7EB;
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-gray);
+    background-color: var(--light-gray);
+    line-height: 1.6;
+}
+
+/* Typography */
+.font-serif {
+    font-family: 'Playfair Display', serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+}
+
+/* Smooth Transitions */
+.transition-all {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+}
+
+.transition-colors {
+    transition-property: color, background-color, border-color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms;
+}
+
+.transition-transform {
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+}
+
+/* Animations */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.animate-slide-up {
+    animation: slideUp 0.8s ease-out;
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.6s ease-out;
+}
+
+.animate-slide-in-left {
+    animation: slideInLeft 0.8s ease-out;
+}
+
+.animate-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Product Cards */
+.product-card {
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.product-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, transparent, rgba(249, 115, 22, 0.1));
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(249, 115, 22, 0.15);
+}
+
+.product-card:hover::before {
+    opacity: 1;
+}
+
+/* Active Product Card */
+.product-card.active {
+    border-color: var(--primary-orange);
+    background: linear-gradient(135deg, #fff7ed 0%, #fffbf7 100%);
+    box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.1);
+}
+
+.product-card.active::after {
+    content: '✓';
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    width: 28px;
+    height: 28px;
+    background: var(--primary-orange);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 16px;
+    font-weight: bold;
+    animation: slideUp 0.3s ease-out;
+}
+
+/* Form Inputs */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+select,
+textarea {
+    transition: all 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--primary-orange) !important;
+    box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.1) !important;
+}
+
+/* Buttons */
+button {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:focus {
+    outline: 2px solid var(--primary-orange);
+    outline-offset: 2px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--light-gray);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border-gray);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-orange);
+}
+
+/* Selection */
+::selection {
+    background-color: var(--primary-orange);
+    color: white;
+}
+
+::-moz-selection {
+    background-color: var(--primary-orange);
+    color: white;
+}
+
+/* Utility Classes */
+.shadow-sm {
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.shadow-md {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.shadow-lg {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.shadow-xl {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Text */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+
+    .product-card {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --light-gray: #111827;
+        --border-gray: #374151;
+    }
+}
+
+/* Custom Gradient Classes */
+.gradient-orange {
+    background: linear-gradient(135deg, var(--primary-orange) 0%, #EA580C 100%);
+}
+
+.gradient-text-orange {
+    background: linear-gradient(135deg, var(--primary-orange) 0%, #EA580C 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Hover Effects */
+.hover-lift:hover {
+    transform: translateY(-4px);
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+}
+
+.hover-glow:hover {
+    box-shadow: 0 0 20px rgba(249, 115, 22, 0.3);
+}
+
+/* Badge Style */
+.badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.badge-primary {
+    background-color: var(--primary-orange);
+    color: white;
+}
+
+.badge-secondary {
+    background-color: rgba(249, 115, 22, 0.1);
+    color: var(--primary-orange);
+}
+
+/* Container Queries Support */
+@supports (container-type: inline-size) {
+    @container (max-width: 640px) {
+        .hide-on-small {
+            display: none;
+        }
+    }
+}
+
+/* Print Styles */
+@media print {
+    nav,
+    footer,
+    button {
+        display: none;
+    }
+
+    body {
+        background: white;
+        color: black;
+    }
+}
