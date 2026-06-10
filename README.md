@@ -1,4 +1,4 @@
-# Gifted Bites 🎁
+# Gift Bites 🎁
 
 > Mengubah Snack Sederhana Menjadi Hadiah Estetik
 
