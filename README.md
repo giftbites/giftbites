@@ -2,7 +2,7 @@
 
 > Mengubah Snack Sederhana Menjadi Hadiah Estetik
 
-Gifted Bites adalah penyedia mini gift berkualitas dengan harga terjangkau untuk mahasiswa dan pelajar. Kami menyediakan berbagai pilihan kemasan aesthetic seperti pouch makanan berhias, buket snack mini, dan snack box kustom.
+Gift Bites adalah penyedia mini gift berkualitas dengan harga terjangkau untuk mahasiswa dan pelajar. Kami menyediakan berbagai pilihan kemasan aesthetic seperti pouch makanan berhias, buket snack mini, dan snack box kustom.
 
 ## 🌟 Fitur Utama
 
