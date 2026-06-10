@@ -1,0 +1,24 @@
+# Gifted Bites SEO Configuration
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /*.json$
+Disallow: /private/
+
+# Google Search Console
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0
+
+# Sitemap
+Sitemap: https://giftbites.github.io/sitemap.xml
+
+# Cache rules
+User-agent: *
+Crawl-delay: 1
+Request-rate: 10/1s
