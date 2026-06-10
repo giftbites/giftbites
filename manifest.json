@@ -1,6 +1,6 @@
 {
-  "name": "Gifted Bites - Aesthetic Mini Gifts",
-  "short_name": "Gifted Bites",
+  "name": "Gift Bites - Aesthetic Mini Gifts",
+  "short_name": "Gift Bites",
   "description": "Penyedia mini gift aesthetic berkualitas dengan harga terjangkau untuk mahasiswa dan pelajar",
   "start_url": "/",
   "display": "standalone",
@@ -19,7 +19,7 @@
   ],
   "screenshots": [
     {
-      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 540 720'><rect fill='%23F9FAFB' width='540' height='720'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='60' fill='%23F97316' font-family='serif' font-weight='bold'>Gifted Bites</text></svg>",
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 540 720'><rect fill='%23F9FAFB' width='540' height='720'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='60' fill='%23F97316' font-family='serif' font-weight='bold'>Gift Bites</text></svg>",
       "sizes": "540x720",
       "type": "image/svg+xml",
       "form_factor": "narrow"
@@ -29,7 +29,7 @@
     {
       "name": "Lihat Katalog",
       "short_name": "Katalog",
-      "description": "Jelajahi katalog produk Gifted Bites",
+      "description": "Jelajahi katalog produk Gift Bites",
       "url": "/order.html",
       "icons": [
         {
